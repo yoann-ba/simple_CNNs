@@ -5,8 +5,8 @@
 
 #%% imports
 
+import keras
 from keras import layers
-from keras.models import Functional
 
 
 
@@ -128,7 +128,7 @@ def ConvNext(nb_blocks = (3, 3, 9, 3),
             x = ClassifierHead(x, nb_classes, model_name=model_name)
     # 
     
-    model = Functional(inputs = inputs, outputs = x, name = model_name)
+    model = keras.Model(inputs = inputs, outputs = x, name = model_name)
     
     return model
 
