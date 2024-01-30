@@ -117,9 +117,11 @@ def ConvNext(nb_blocks = (3, 3, 9, 3),
     for i_s in range(len(nb_blocks)):
         # for each block
         for i_b in range(nb_blocks[i_s]):
-            x = ConvNextBlock(x, nb_c=nb_channels[i_s], model_name=model_name)
+            x = ConvNextBlock(x, nb_c=nb_channels[i_s], 
+                              model_name=f"{model_name}_s{i_s+1}_b{i_b+1}")
         if i_s < len(nb_blocks)-1: # no downsample on the last one
-            x = Downsampling(x, nb_c=nb_channels[i_s + 1], model_name=model_name)
+            x = Downsampling(x, nb_c=nb_channels[i_s + 1], 
+                             model_name=f"{model_name}_s{i_s+1}_b{i_b+1}")
     # end stage loop
     
     # output/postprocess
