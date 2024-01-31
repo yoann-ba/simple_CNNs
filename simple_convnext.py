@@ -14,7 +14,6 @@ from keras import layers
 
 # 
 # Small -> Large -> Small pattern
-#TODO add stage and block nb to name
 def ConvNextBlock(x, nb_c, model_name):
     
     # depthwise grouped conv, 7x7, 96 channels
@@ -54,7 +53,6 @@ def Stem(x, nb_c, model_name):
 
 
 # 
-#TODO add stage nb to name
 # if we don't want to downsample then it comes out same size but half reduced in details
 def Downsampling(x, nb_c, model_name, downsample = True):
     
