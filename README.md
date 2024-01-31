@@ -11,6 +11,9 @@ Differences:
 - No Stochastic Depth that's in the paper and the keras official implementation
 - No float16/other dtype optimisation (no info about it on the official?)
 - No data/inputs check or verification that are in the official implementation
+- No pre-trained weights obviously
 - 
 
-[some links I guess]
+Sources/Refs: 
+- [Official ConvNext Keras implementation](https://github.com/keras-team/keras/blob/v3.0.2/keras/applications/convnext.py)
+- [ConvNext Paper](https://arxiv.org/abs/2201.03545)
