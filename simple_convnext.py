@@ -11,13 +11,13 @@ import keras
 from keras import layers
 
 # for custom layers
-from keras.layers.layer import Layer
+from keras.layers import Layer
 from keras import ops, random # for stochastic depth
 from keras import initializers # for layer scale
 
 
 #%% Custom layers
-# taken blindly from 
+# taken from 
 # https://github.com/keras-team/keras/blob/v3.0.2/keras/applications/convnext.py
 
 
